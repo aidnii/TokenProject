@@ -9,6 +9,8 @@ contract Token {
 
     mapping(address => uint256) public balanceOf;
 
+    event Transfer(address indexed from, address indexed to, uint256 value);
+
     constructor(string memory _name, string memory _symbol, uint _decimals, uint _totalSupply){
         name = _name;
         symbol = _symbol;
@@ -17,8 +19,9 @@ contract Token {
         balanceOf[msg.sender] = totalSupply;
     }
 
-    function transfer(address _to, uint256 _value) external returns (bool success) {
-        
+    function transfer(address _from, address _to, uint256 _value) external returns (bool success) {
+        balanceOf[msg.sender] = balanceOf[_from] - (_value);
+        balanceOf[_to] = balanceOf[_to] + (_value);
     }
 }
 
