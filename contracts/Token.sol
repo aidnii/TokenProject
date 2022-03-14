@@ -5,7 +5,7 @@ contract Token {
     string public name = "AIDNI";
     string public symbol = "AID";
     uint256 public decimals = 18;
-    uint256 public totalSupply = 1000000000000000000;
+    uint256 public totalSupply = 1000000000000000000000000;
 
     mapping(address => uint256) public balanceOf;
 
@@ -14,6 +14,11 @@ contract Token {
         symbol = _symbol;
         decimals = _decimals;
         totalSupply = _totalSupply;
+        balanceOf[msg.sender] = totalSupply;
+    }
+
+    function transfer(address _to, uint256 _value) external returns (bool success) {
+        
     }
 }
 
