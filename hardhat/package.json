@@ -1,0 +1,22 @@
+{
+  "name": "hardhat",
+  "version": "1.0.0",
+  "description": "Token Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aidnii/TokenProject.git"
+  },
+  "author": "ilh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aidnii/TokenProject/issues"
+  },
+  "homepage": "https://github.com/aidnii/TokenProject#readme",
+  "devDependencies": {
+    "hardhat": "^2.9.1"
+  }
+}
